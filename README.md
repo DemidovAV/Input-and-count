@@ -1,3 +1,3 @@
 # Input-and-count
-Условия задания изложены в файле ReadMe.txt \n
-sadsad
+Условия задания изложены в файле ReadMe.txt
+
