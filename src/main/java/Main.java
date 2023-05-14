@@ -16,12 +16,13 @@ public class Main {
         n = dbController.getN();
 
         double startPoint = System.currentTimeMillis();
+
         RepositoryManager repositoryManager = new SQLiteManager(dbFile);
         dbController.insertIntoTable(repositoryManager, n);
         dbController.downloadToXML(repositoryManager, xml1Path);
         dbController.transformXMLFile(xml1Path, xml2Path, patternPath);
-
         System.out.println("Sum of FIELD values: " + dbController.getSumOfFields(xml2Path));
+
         double exTime = (System.currentTimeMillis() - startPoint) / 1000;
         System.out.println("Execution time: " + exTime + " sec.");
     }
